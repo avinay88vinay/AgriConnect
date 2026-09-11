@@ -55,8 +55,7 @@ import {
 } from "firebase/firestore";
 import { signOut, signInAnonymously } from "firebase/auth";
 import { auth, db } from "../../firebase";
-import "./FPODashboard.css";
-
+import "./FpoDashboard.css";
 const EMPTY_FARMER = {
   name: "",
   mobile: "",
