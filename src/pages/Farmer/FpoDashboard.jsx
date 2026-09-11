@@ -1339,7 +1339,11 @@ function FPODashboard() {
         {section === "overview" && (
           <section className="fpo-page-content">
             <div className="fpo-hero">
-              <img className="fpo-hero-image" src="/images/fpo-hero.png" alt="FPO farmers working together" />
+              <img
+  className="fpo-hero-image"
+  src={`${import.meta.env.BASE_URL}images/fpo-hero.png`}
+  alt="FPO farmers working together"
+/>
               <div className="fpo-hero-overlay" />
               <div className="fpo-hero-copy">
                 <span className="fpo-hero-kicker">AGRICONNECT • FPO MANAGEMENT</span>

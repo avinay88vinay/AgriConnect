@@ -596,7 +596,7 @@ function ConsumerDashboard() {
               <div className="hero-visual">
                 <img
                   className="hero-real-image"
-                  src="/images/agri-hero.png"
+                  src={`${import.meta.env.BASE_URL}images/agri-hero.png`}
                   alt="Fresh vegetables growing on a local farm"
                 />
                 <div className="hero-image-overlay"/>
