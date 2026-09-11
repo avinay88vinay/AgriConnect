@@ -1,0 +1,827 @@
+/* =========================================
+   AGRICONNECT
+   DELIVERY PARTNER LOGIN
+   Same UI as Individual Farmer Login
+   ========================================= */
+
+.farmer-login-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fcf7 0%,
+      #f1f8ee 55%,
+      #e7f1e3 100%
+    );
+
+  color: #18351f;
+}
+
+.farmer-login-glow {
+  position: absolute;
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+  filter: blur(75px);
+
+  pointer-events: none;
+}
+
+.farmer-login-glow-one {
+  top: -250px;
+  right: -170px;
+
+  background: rgba(81, 145, 78, 0.10);
+}
+
+.farmer-login-glow-two {
+  bottom: -270px;
+  left: -180px;
+
+  background: rgba(105, 160, 83, 0.08);
+}
+
+.farmer-login-container {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 480px;
+
+  padding: 45px 25px;
+
+  text-align: center;
+}
+
+/* =========================================
+   BACK BUTTON
+   ========================================= */
+
+.farmer-login-back {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.85);
+  color: #68776c;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.farmer-login-back:hover {
+  color: #347c42;
+
+  border-color: rgba(67, 136, 78, 0.25);
+  background: #ffffff;
+
+  transform: translateX(-2px);
+}
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.farmer-login-logo {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #43884e;
+  background: #ffffff;
+
+  border: 1px solid rgba(52, 124, 66, 0.13);
+  border-radius: 17px;
+
+  box-shadow:
+    0 12px 30px rgba(39, 91, 47, 0.09);
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.farmer-login-header {
+  margin-bottom: 28px;
+}
+
+.farmer-login-label {
+  margin-bottom: 8px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: #43884e;
+}
+
+.farmer-login-header h1 {
+  margin: 0;
+
+  font-size: clamp(32px, 6vw, 42px);
+  font-weight: 700;
+
+  letter-spacing: -1.4px;
+
+  color: #18351f;
+}
+
+.farmer-login-header h1 span {
+  color: #43884e;
+  font-weight: 400;
+}
+
+.farmer-login-subtitle {
+  max-width: 350px;
+
+  margin: 10px auto 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #78867b;
+}
+
+/* =========================================
+   LOGIN CARD
+   ========================================= */
+
+.farmer-login-card {
+  width: 100%;
+
+  padding: 30px;
+
+  text-align: left;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  box-shadow:
+    0 15px 40px rgba(39, 91, 47, 0.08);
+}
+
+/* =========================================
+   FIELD
+   ========================================= */
+
+.farmer-login-field label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #35533c;
+}
+
+/* =========================================
+   MOBILE NUMBER INPUT
+   ========================================= */
+
+.farmer-mobile-input {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #dbe7dc;
+  border-radius: 12px;
+
+  background: #fbfdfb;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.farmer-mobile-input:focus-within {
+  border-color: #6aa873;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 136, 78, 0.08);
+}
+
+/* =========================================
+   COUNTRY CODE
+   ========================================= */
+
+.farmer-mobile-input .country-code {
+  flex-shrink: 0;
+
+  min-width: 52px;
+
+  height: 100%;
+
+  padding-left: 15px;
+
+  display: flex;
+  align-items: center;
+
+  background: transparent;
+
+  color: #49604f;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.farmer-mobile-input .country-code span {
+  display: block;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  color: #49604f;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.farmer-mobile-input .mobile-divider {
+  flex-shrink: 0;
+
+  width: 1px;
+  height: 25px;
+
+  margin: 0 11px;
+
+  background: #dbe4dc;
+}
+
+/* =========================================
+   SMARTPHONE ICON
+   ========================================= */
+
+.farmer-mobile-input .mobile-icon {
+  flex-shrink: 0;
+
+  width: 19px;
+  height: 19px;
+
+  display: block;
+
+  margin: 0;
+
+  padding: 0;
+
+  color: #7a8b7e;
+
+  background: transparent;
+
+  border: none;
+
+  stroke: currentColor;
+}
+
+/* =========================================
+   MOBILE INPUT FIELD
+   ========================================= */
+
+.farmer-mobile-input input {
+  flex: 1;
+
+  width: 0;
+  min-width: 0;
+
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0 14px 0 9px;
+
+  border: none;
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: transparent;
+
+  color: #29462f;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.farmer-mobile-input input::placeholder {
+  color: #a0aaa2;
+  opacity: 1;
+}
+
+/* Remove browser number controls */
+
+.farmer-mobile-input input::-webkit-inner-spin-button,
+.farmer-mobile-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =========================================
+   MOBILE HELPER
+   ========================================= */
+
+.mobile-helper {
+  margin-top: 9px;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  color: #89958c;
+}
+
+/* =========================================
+   SEND OTP BUTTON
+   ========================================= */
+
+.send-otp-button {
+  width: 100%;
+  height: 52px;
+
+  margin-top: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #43884e;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.send-otp-button:hover:not(:disabled) {
+  background: #347c42;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(52, 124, 66, 0.18);
+}
+
+.send-otp-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.send-otp-button:disabled {
+  background: #c7d5c9;
+  color: #f5f8f5;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   DEMO OTP
+   ========================================= */
+
+.demo-otp-box {
+  width: 100%;
+
+  margin-bottom: 21px;
+
+  padding: 13px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px dashed #9abd9e;
+  border-radius: 10px;
+
+  background: #f3f9f1;
+}
+
+.demo-otp-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.demo-otp-info span {
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #55705b;
+}
+
+.demo-otp-info small {
+  font-size: 9px;
+
+  color: #8a998d;
+}
+
+.demo-otp-box strong {
+  font-size: 19px;
+
+  letter-spacing: 3px;
+
+  color: #347c42;
+}
+
+/* =========================================
+   OTP INPUT
+   ========================================= */
+
+.otp-input {
+  width: 100%;
+  height: 54px;
+
+  padding: 0 18px;
+
+  border: 1px solid #dbe7dc;
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fbfdfb;
+  color: #29462f;
+
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 600;
+
+  letter-spacing: 7px;
+
+  text-align: center;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.otp-input:focus {
+  border-color: #6aa873;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 136, 78, 0.08);
+}
+
+.otp-input::placeholder {
+  color: #a0aaa2;
+
+  letter-spacing: 1px;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   CHANGE NUMBER
+   ========================================= */
+
+.change-number-button {
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 4px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #347c42;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.change-number-button:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   MESSAGES
+   ========================================= */
+
+.login-message {
+  margin-top: 16px;
+
+  padding: 10px 12px;
+
+  border-radius: 9px;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.login-error {
+  background: #fff2f1;
+
+  color: #b0524b;
+
+  border: 1px solid #f2d8d5;
+}
+
+.login-success {
+  background: #f0f8ef;
+
+  color: #43884e;
+
+  border: 1px solid #d8e9d6;
+}
+
+/* =========================================
+   SECURITY
+   ========================================= */
+
+.login-security {
+  margin-top: 20px;
+
+  padding-top: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-top: 1px solid #edf1ed;
+
+  color: #7d8c80;
+
+  font-size: 10px;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+.login-security svg {
+  flex-shrink: 0;
+
+  color: #43884e;
+
+  background: transparent;
+}
+
+/* =========================================
+   REGISTER
+   ========================================= */
+
+.farmer-register {
+  margin-top: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  font-size: 12px;
+
+  color: #7c897f;
+}
+
+.farmer-register button {
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #347c42;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.farmer-register button:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.farmer-login-footer {
+  margin-top: 28px;
+
+  font-size: 9px;
+
+  letter-spacing: 1.1px;
+
+  text-transform: uppercase;
+
+  color: #929d94;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  .farmer-login-container {
+    max-width: 100%;
+
+    padding: 35px 18px;
+  }
+
+  .farmer-login-back {
+    top: 22px;
+    left: 18px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .farmer-login-logo {
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 17px;
+  }
+
+  .farmer-login-header {
+    margin-bottom: 23px;
+  }
+
+  .farmer-login-header h1 {
+    font-size: 31px;
+  }
+
+  .farmer-login-subtitle {
+    font-size: 12px;
+  }
+
+  .farmer-login-card {
+    padding: 23px 20px;
+
+    border-radius: 17px;
+  }
+
+  .farmer-login-field label {
+    font-size: 12px;
+  }
+
+  .farmer-mobile-input {
+    height: 51px;
+  }
+
+  .farmer-mobile-input .country-code {
+    min-width: 50px;
+
+    padding-left: 13px;
+
+    font-size: 13px;
+  }
+
+  .farmer-mobile-input .country-code span {
+    font-size: 13px;
+  }
+
+  .farmer-mobile-input .mobile-divider {
+    height: 23px;
+
+    margin: 0 9px;
+  }
+
+  .farmer-mobile-input .mobile-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .farmer-mobile-input input {
+    font-size: 13px;
+
+    padding-left: 8px;
+    padding-right: 12px;
+  }
+
+  .send-otp-button {
+    height: 50px;
+  }
+
+  .otp-input {
+    height: 51px;
+
+    font-size: 18px;
+
+    letter-spacing: 6px;
+  }
+
+  .demo-otp-box {
+    padding: 12px 14px;
+  }
+
+  .demo-otp-box strong {
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 380px) {
+
+  .farmer-login-container {
+    padding: 30px 15px;
+  }
+
+  .farmer-login-header h1 {
+    font-size: 28px;
+  }
+
+  .farmer-login-card {
+    padding: 20px 17px;
+  }
+
+  .farmer-mobile-input .country-code {
+    min-width: 48px;
+
+    padding-left: 11px;
+  }
+
+  .farmer-mobile-input .mobile-divider {
+    margin: 0 8px;
+  }
+
+  .farmer-mobile-input input {
+    padding-left: 7px;
+    padding-right: 9px;
+
+    font-size: 12px;
+  }
+
+  .farmer-login-footer {
+    margin-top: 22px;
+  }
+}

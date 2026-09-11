@@ -1,0 +1,531 @@
+.fpo-wait-page {
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(45, 125, 70, 0.08),
+      transparent 35%
+    ),
+    #f7f8f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 20px;
+}
+
+.fpo-wait-card {
+  width: 100%;
+  max-width: 620px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e8e1;
+  border-radius: 24px;
+
+  padding: 42px;
+
+  text-align: center;
+
+  box-shadow:
+    0 20px 60px rgba(25, 60, 35, 0.08);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.fpo-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-bottom: 34px;
+
+  color: #214d2e;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.fpo-brand-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf5ee;
+  color: #2f7543;
+}
+
+/* =========================================
+   STATUS ICON
+========================================= */
+
+.fpo-status-icon {
+  width: 92px;
+  height: 92px;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fpo-status-icon.pending {
+  background: #f6f0df;
+  color: #9a7524;
+}
+
+.fpo-status-icon.approved {
+  background: #eaf6ed;
+  color: #2e7d45;
+}
+
+.fpo-status-icon.rejected {
+  background: #faece9;
+  color: #b24a3b;
+}
+
+.fpo-wait-icon {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #edf5ee;
+  color: #2f7543;
+}
+
+.fpo-wait-icon.loading svg {
+  animation: fpo-spin 1.2s linear infinite;
+}
+
+@keyframes fpo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   STATUS LABEL
+========================================= */
+
+.fpo-status-label {
+  display: inline-block;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  margin-bottom: 12px;
+}
+
+.pending-label {
+  color: #9a7524;
+}
+
+.approved-label {
+  color: #2e7d45;
+}
+
+.rejected-label {
+  color: #b24a3b;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.fpo-wait-card h1 {
+  margin: 0 0 14px;
+
+  color: #193b25;
+
+  font-size: 34px;
+  line-height: 1.2;
+
+  font-weight: 600;
+}
+
+.fpo-wait-card > p {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  color: #68736b;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   APPLICATION INFO
+========================================= */
+
+.fpo-application-info {
+  margin-top: 28px;
+
+  padding: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  background: #f7f9f6;
+
+  border: 1px solid #e7ece6;
+  border-radius: 16px;
+}
+
+.fpo-application-info div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fpo-application-info span {
+  color: #8a948d;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.fpo-application-info strong {
+  color: #294c33;
+  font-size: 13px;
+  font-weight: 600;
+
+  word-break: break-word;
+}
+
+.pending-text {
+  color: #9a7524 !important;
+}
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.fpo-progress {
+  display: flex;
+  align-items: center;
+
+  margin-top: 32px;
+}
+
+.fpo-progress-step {
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  color: #9aa29c;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.fpo-progress-step.active {
+  color: #326f42;
+}
+
+.step-circle {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eef1ed;
+
+  color: #9aa29c;
+}
+
+.fpo-progress-step.active .step-circle {
+  background: #eaf5ec;
+  color: #326f42;
+}
+
+.progress-line {
+  flex: 1;
+
+  height: 2px;
+
+  margin: 0 8px 25px;
+
+  background: #e4e8e3;
+}
+
+.active-line {
+  background: #75a47f;
+}
+
+/* =========================================
+   NOTE
+========================================= */
+
+.fpo-note {
+  margin-top: 28px;
+
+  padding: 15px 17px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  text-align: left;
+
+  background: #f5f8f4;
+
+  border: 1px solid #e4ebe3;
+  border-radius: 14px;
+
+  color: #4f6254;
+}
+
+.fpo-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fpo-note p {
+  margin: 0;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   REDIRECT
+========================================= */
+
+.fpo-redirect-box {
+  margin-top: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  padding: 14px;
+
+  background: #f4f8f4;
+
+  border-radius: 12px;
+
+  color: #356b42;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   REJECTION
+========================================= */
+
+.fpo-reason-box {
+  margin-top: 25px;
+
+  padding: 18px;
+
+  text-align: left;
+
+  background: #fff8f6;
+
+  border: 1px solid #f0d8d3;
+  border-radius: 14px;
+}
+
+.reason-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 9px;
+
+  color: #9f4337;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.fpo-reason-box p {
+  margin: 0;
+
+  color: #6d5551;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.fpo-primary-btn {
+  width: 100%;
+
+  margin-top: 26px;
+
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #2f7543;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.fpo-primary-btn:hover {
+  background: #245e35;
+  transform: translateY(-1px);
+}
+
+.fpo-logout-btn {
+  margin-top: 16px;
+
+  padding: 10px 16px;
+
+  border: 1px solid #dfe5df;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #68736b;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.fpo-logout-btn:hover {
+  border-color: #c9d2c9;
+  color: #35533d;
+  background: #f8faf8;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error-card .fpo-wait-icon.error {
+  background: #faece9;
+  color: #b24a3b;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+  .fpo-wait-page {
+    padding: 20px 14px;
+  }
+
+  .fpo-wait-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .fpo-wait-card h1 {
+    font-size: 28px;
+  }
+
+  .fpo-application-info {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .fpo-application-info div {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5eae4;
+  }
+
+  .fpo-application-info div:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .fpo-progress-step span {
+    font-size: 10px;
+  }
+
+  .step-circle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .progress-line {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .fpo-wait-card {
+    padding: 26px 16px;
+  }
+
+  .fpo-status-icon {
+    width: 78px;
+    height: 78px;
+  }
+
+  .fpo-wait-card h1 {
+    font-size: 25px;
+  }
+
+  .fpo-wait-card > p {
+    font-size: 14px;
+  }
+
+  .fpo-progress-step span {
+    display: none;
+  }
+
+  .progress-line {
+    margin-bottom: 0;
+  }
+}

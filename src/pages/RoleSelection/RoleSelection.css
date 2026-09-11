@@ -1,0 +1,514 @@
+/* =========================================
+   AGRICONNECT ROLE SELECTION
+========================================= */
+
+.role-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fcf7 0%,
+      #f1f8ee 55%,
+      #e7f1e3 100%
+    );
+
+  color: #18351f;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.role-background-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  pointer-events: none;
+}
+
+.role-glow-one {
+  top: -230px;
+  right: -150px;
+
+  background: rgba(81, 145, 78, 0.10);
+}
+
+.role-glow-two {
+  bottom: -250px;
+  left: -170px;
+
+  background: rgba(105, 160, 83, 0.08);
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.role-container {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1000px;
+
+  padding: 50px 25px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.role-header {
+  margin-bottom: 42px;
+}
+
+.role-logo {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #43884e;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(52, 124, 66, 0.13);
+
+  border-radius: 17px;
+
+  box-shadow:
+    0 12px 30px rgba(39, 91, 47, 0.09);
+}
+
+.role-header h1 {
+  margin: 0;
+
+  font-size: clamp(30px, 5vw, 42px);
+
+  font-weight: 700;
+
+  letter-spacing: -1.4px;
+
+  color: #18351f;
+}
+
+.role-header h1 span {
+  color: #43884e;
+  font-weight: 400;
+}
+
+.role-header p {
+  margin-top: 11px;
+
+  font-size: 15px;
+
+  color: #78867b;
+}
+
+
+/* =========================================
+   ROLE CARDS
+========================================= */
+
+.role-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.role-card {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 30px 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.86);
+
+  box-shadow:
+    0 10px 30px rgba(39, 91, 47, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  font-family: inherit;
+}
+
+.role-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(67, 136, 78, 0.28);
+
+  box-shadow:
+    0 18px 38px rgba(39, 91, 47, 0.12);
+}
+
+.role-card:active {
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.role-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #43884e;
+
+  background: #eef7eb;
+
+  border-radius: 16px;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.role-info h2 {
+  margin: 0;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  color: #24452b;
+}
+
+.role-info p {
+  margin-top: 9px;
+
+  max-width: 230px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #7b897e;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.role-arrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 22px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #43884e;
+
+  border-radius: 50%;
+
+  background: #f1f8ee;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.role-card:hover .role-arrow {
+  transform: translateX(4px);
+
+  background: #e5f1e1;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.role-footer {
+  margin-top: 38px;
+
+  font-size: 10px;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+
+  color: #909c92;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .role-cards {
+    grid-template-columns: 1fr;
+
+    max-width: 480px;
+  }
+
+  .role-card {
+    min-height: 170px;
+
+    padding: 24px;
+  }
+
+  .role-icon {
+    margin-bottom: 18px;
+  }
+
+  .role-header {
+    margin-bottom: 30px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .role-container {
+    padding: 35px 18px;
+  }
+
+  .role-header h1 {
+    font-size: 30px;
+  }
+
+  .role-header p {
+    font-size: 13px;
+  }
+
+  .role-card {
+    min-height: 155px;
+
+    border-radius: 17px;
+  }
+
+  .role-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .role-info h2 {
+    font-size: 20px;
+  }
+
+  .role-info p {
+    font-size: 12px;
+  }
+}
+/* =========================================
+   LANGUAGE BUTTON
+========================================= */
+
+.language-back-button {
+  display: inline-flex;
+
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #68776c;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.language-back-button:hover {
+  color: #347c42;
+
+  background: rgba(67, 136, 78, 0.07);
+}
+/* =========================================
+   BACK TO LANGUAGE ARROW
+========================================= */
+
+.language-back-arrow {
+  position: absolute;
+
+  top: 35px;
+  left: 25px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #68776c;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.language-back-arrow:hover {
+  color: #347c42;
+
+  border-color: rgba(67, 136, 78, 0.25);
+
+  background: #ffffff;
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .language-back-arrow {
+    top: 22px;
+    left: 18px;
+
+    width: 38px;
+    height: 38px;
+  }
+}
+/* =========================================
+   BACK TO LANGUAGE ARROW
+========================================= */
+
+.language-back-arrow {
+  position: absolute;
+
+  top: 35px;
+  left: 25px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #68776c;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.language-back-arrow:hover {
+  color: #347c42;
+
+  border-color: rgba(67, 136, 78, 0.25);
+
+  background: #ffffff;
+
+  transform: translateX(-2px);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+  .language-back-arrow {
+    top: 22px;
+    left: 18px;
+
+    width: 38px;
+    height: 38px;
+  }
+}   

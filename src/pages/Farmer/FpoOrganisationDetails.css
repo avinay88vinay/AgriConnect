@@ -1,0 +1,672 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap");
+
+.fpo-org-page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  background:
+    linear-gradient(
+      180deg,
+      #f9fcf7 0%,
+      #f1f8ee 55%,
+      #e7f1e3 100%
+    );
+  color: #18351f;
+  font-family: "Inter", sans-serif;
+}
+
+.fpo-org-page *,
+.fpo-org-page *::before,
+.fpo-org-page *::after {
+  box-sizing: border-box;
+}
+
+.fpo-org-glow {
+  position: fixed;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.fpo-org-glow-one {
+  top: -250px;
+  right: -170px;
+  background: rgba(81, 145, 78, 0.1);
+}
+
+.fpo-org-glow-two {
+  bottom: -280px;
+  left: -190px;
+  background: rgba(105, 160, 83, 0.08);
+}
+
+.fpo-org-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  padding: 45px 25px 50px;
+}
+
+.fpo-org-back {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #68776c;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.fpo-org-back:hover {
+  color: #347c42;
+  background: #ffffff;
+  transform: translateX(-2px);
+}
+
+.fpo-org-header {
+  margin: 15px auto 28px;
+  text-align: center;
+}
+
+.fpo-org-logo {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(52, 124, 66, 0.13);
+  border-radius: 17px;
+  background: #ffffff;
+  color: #43884e;
+  box-shadow: 0 12px 30px rgba(39, 91, 47, 0.09);
+}
+
+.fpo-org-label {
+  margin-bottom: 7px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: #43884e;
+}
+
+.fpo-org-header h1 {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  color: #18351f;
+}
+
+.fpo-org-header h1 span {
+  color: #43884e;
+  font-weight: 400;
+}
+
+.fpo-org-subtitle {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #78867b;
+}
+
+/* Progress */
+
+.fpo-org-progress {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #a0aaa2;
+}
+
+.progress-step span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #d7e2d8;
+  background: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.progress-step p {
+  margin: 0;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.progress-step.active {
+  color: #43884e;
+}
+
+.progress-step.active span {
+  border-color: #43884e;
+  background: #43884e;
+  color: #ffffff;
+}
+
+.progress-line {
+  width: 60px;
+  height: 1px;
+  margin: 0 10px;
+  background: #d8e3d9;
+}
+
+/* Card */
+
+.fpo-org-card {
+  padding: 30px;
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 15px 40px rgba(39, 91, 47, 0.08);
+}
+
+/* Sections */
+
+.form-section {
+  padding-bottom: 27px;
+  margin-bottom: 27px;
+  border-bottom: 1px solid #edf1ed;
+}
+
+.form-section:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-section-title {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.form-section-title > svg {
+  flex-shrink: 0;
+  color: #43884e;
+}
+
+.form-section-title h2 {
+  margin: 0;
+  font-size: 15px;
+  color: #29462f;
+}
+
+.form-section-title p {
+  margin: 3px 0 0;
+  font-size: 10px;
+  color: #929d94;
+}
+
+/* Grid */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 17px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Fields */
+
+.form-field label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #526558;
+}
+
+.form-field label span {
+  margin-left: 3px;
+  color: #43884e;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfdfb;
+  color: #29462f;
+  font-family: inherit;
+  font-size: 12px;
+  transition: 0.2s ease;
+}
+
+.form-field input,
+.form-field select {
+  height: 48px;
+  padding: 0 13px;
+}
+
+.form-field textarea {
+  padding: 13px;
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: #6aa873;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(67, 136, 78, 0.07);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: #a0aaa2;
+}
+
+.form-field select {
+  cursor: pointer;
+}
+
+.form-field select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Custom dropdown wrapper */
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 38px;
+}
+
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #829187;
+}
+
+/* GPS */
+
+.fpo-gps-card {
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border: 1px solid #d9eadb;
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    #f5faf3 0%,
+    #eef7ec 100%
+  );
+}
+
+.fpo-gps-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #43884e;
+  box-shadow: 0 5px 15px rgba(52, 124, 66, 0.08);
+}
+
+.fpo-gps-content {
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.fpo-gps-content h3 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #29462f;
+}
+
+.fpo-gps-content p {
+  margin: 4px 0 0;
+  font-size: 10px;
+  color: #7b897e;
+}
+
+.fpo-gps-content p.gps-success-text {
+  color: #43884e;
+  font-weight: 500;
+}
+
+.fpo-gps-content small {
+  display: block;
+  margin-top: 3px;
+  font-size: 9px;
+  color: #94a097;
+}
+
+.fpo-gps-button {
+  min-width: 145px;
+  height: 40px;
+  padding: 0 13px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #cfe2d1;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #43884e;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.fpo-gps-button:hover:not(:disabled) {
+  border-color: #43884e;
+  background: #f5faf3;
+  transform: translateY(-1px);
+}
+
+.fpo-gps-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.gps-spin {
+  animation: gpsSpin 1s linear infinite;
+}
+
+@keyframes gpsSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fpo-gps-hint {
+  margin: -9px 0 18px;
+  font-size: 9px;
+  line-height: 1.55;
+  color: #8a978d;
+}
+
+/* Icon input */
+
+.input-with-icon {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+  background: #fbfdfb;
+  transition: 0.2s ease;
+}
+
+.input-with-icon:focus-within {
+  border-color: #6aa873;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(67, 136, 78, 0.07);
+}
+
+.input-with-icon svg {
+  flex-shrink: 0;
+  color: #829187;
+}
+
+.input-with-icon input {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+/* Mobile */
+
+.mobile-field {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+  background: #fbfdfb;
+  transition: 0.2s ease;
+}
+
+.mobile-field:focus-within {
+  border-color: #6aa873;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(67, 136, 78, 0.07);
+}
+
+.mobile-code {
+  padding-left: 13px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #526558;
+}
+
+.mobile-divider {
+  width: 1px;
+  height: 22px;
+  margin: 0 10px;
+  background: #dbe4dc;
+}
+
+.mobile-field svg {
+  flex-shrink: 0;
+  color: #829187;
+}
+
+.mobile-field input {
+  height: 100%;
+  min-width: 0;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* Info */
+
+.fpo-org-info {
+  margin-top: 25px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  border: 1px solid #dcebdc;
+  border-radius: 10px;
+  background: #f4f9f2;
+  color: #64806a;
+}
+
+.fpo-org-info svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #43884e;
+}
+
+.fpo-org-info p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* Error */
+
+.fpo-org-error {
+  margin-top: 17px;
+  padding: 10px 13px;
+  border: 1px solid #f0d7d4;
+  border-radius: 9px;
+  background: #fff3f2;
+  color: #b0524b;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Button */
+
+.fpo-org-next-button {
+  width: 100%;
+  height: 52px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: none;
+  border-radius: 11px;
+  background: #43884e;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.fpo-org-next-button:hover:not(:disabled) {
+  background: #347c42;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(52, 124, 66, 0.18);
+}
+
+.fpo-org-next-button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Footer */
+
+.fpo-org-footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #929d94;
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .fpo-org-container {
+    padding: 35px 18px 40px;
+  }
+
+  .fpo-org-back {
+    top: 22px;
+    left: 18px;
+  }
+
+  .fpo-org-header h1 {
+    font-size: 31px;
+  }
+
+  .fpo-org-card {
+    padding: 22px 19px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .fpo-org-progress {
+    margin-bottom: 22px;
+  }
+
+  .progress-line {
+    width: 25px;
+    margin: 0 5px;
+  }
+
+  .fpo-gps-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .fpo-gps-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .fpo-org-header h1 {
+    font-size: 28px;
+  }
+
+  .progress-step {
+    gap: 4px;
+  }
+
+  .progress-step p {
+    display: none;
+  }
+
+  .progress-line {
+    width: 35px;
+  }
+
+  .fpo-org-card {
+    padding: 20px 16px;
+  }
+
+  .fpo-gps-card {
+    align-items: flex-start;
+  }
+}
+
+/* Ensure the final action remains clickable above decorative layers */
+.fpo-org-card form {
+  position: relative;
+  z-index: 5;
+}
+
+.fpo-org-next-button {
+  position: relative;
+  z-index: 10;
+  pointer-events: auto;
+}

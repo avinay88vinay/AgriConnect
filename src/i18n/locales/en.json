@@ -1,0 +1,51 @@
+{
+  "splash": {
+    "tagline": "From Farm to Your Home",
+    "description": "Connecting farmers, customers and delivery partners",
+    "loading": "Connecting you to AgriConnect",
+    "fresh": "Fresh",
+    "local": "Local",
+    "trusted": "Trusted"
+  },
+
+  "language": {
+    "title": "Choose your language",
+    "subtitle": "Select your preferred language to continue",
+    "english": "English",
+    "telugu": "Telugu",
+    "hindi": "Hindi",
+    "continue": "Continue"
+  },
+
+  "roleSelection": {
+    "welcome": "Welcome to",
+    "brand": "AgriConnect",
+    "chooseRole": "Choose how you want to continue",
+
+    "farmer": "Farmer",
+    "farmerDescription": "Sell your farm products directly to customers",
+
+    "customer": "Customer",
+    "customerDescription": "Buy fresh products directly from local farmers",
+
+    "delivery": "Delivery Partner",
+    "deliveryDescription": "Deliver orders and earn with every delivery",
+
+    "footer": "Fresh • Local • Trusted"
+  },
+
+  "farmerType": {
+    "farmer": "FARMER",
+    "title": "How do you want to join?",
+    "subtitle": "Choose the account type that best describes you",
+
+    "individual": "Individual Farmer",
+    "individualDescription": "Sell products from your own farm directly to customers",
+
+    "fpo": "FPO",
+    "fpoDescription": "Manage products and orders as a Farmer Producer Organization",
+
+    "back": "Back",
+    "footer": "AgriConnect • From Farm to Your Home"
+  }
+}

@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Noto+Serif+Telugu:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+
+/* =========================================
+   DEFAULT FONT — ENGLISH
+========================================= */
+
+body {
+  font-family: "Playfair Display", Georgia, serif !important;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================
+   TELUGU FONT
+========================================= */
+
+html[lang="te"] body {
+  font-family: "Noto Serif Telugu", serif;
+}
+
+
+/* =========================================
+   HINDI FONT
+========================================= */
+
+html[lang="hi"] body {
+  font-family: "Noto Serif Devanagari", serif;
+}

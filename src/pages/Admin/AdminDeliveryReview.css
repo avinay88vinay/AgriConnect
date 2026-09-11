@@ -1,0 +1,1259 @@
+/* =========================================
+   AGRICONNECT
+   ADMIN DELIVERY PARTNER REVIEW
+   ========================================= */
+
+.admin-delivery-review-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background:
+    radial-gradient(
+      circle at 8% 12%,
+      rgba(67, 136, 78, 0.07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(67, 136, 78, 0.05),
+      transparent 30%
+    ),
+    #f6f9f5;
+
+  color: #203528;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.admin-delivery-review-header {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  border-bottom: 1px solid #e2e9e3;
+
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.admin-delivery-review-header-inner {
+  width: 100%;
+  max-width: 1180px;
+
+  min-height: 70px;
+
+  margin: 0 auto;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* Back */
+
+.admin-delivery-back {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 13px;
+
+  border: 1px solid #dce6de;
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  color: #526259;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-delivery-back:hover {
+  color: #2f7041;
+
+  background: #f8fbf8;
+
+  border-color: #bfd3c2;
+
+  transform: translateX(-2px);
+}
+
+/* Header brand */
+
+.admin-delivery-header-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.admin-delivery-header-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef6ef;
+
+  color: #3c7e4c;
+
+  border: 1px solid #dcebdd;
+}
+
+.admin-delivery-header-brand strong {
+  display: block;
+
+  color: #24432d;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-delivery-header-brand span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #839087;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+.admin-delivery-review-container {
+  width: 100%;
+  max-width: 1060px;
+
+  margin: 0 auto;
+
+  padding: 42px 28px 60px;
+}
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.admin-delivery-review-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 25px;
+}
+
+.admin-delivery-review-title > div:first-child {
+  flex: 1;
+}
+
+.admin-delivery-review-title span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #5d8065;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.admin-delivery-review-title h1 {
+  margin: 0;
+
+  color: #203a27;
+
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  letter-spacing: -0.8px;
+}
+
+.admin-delivery-review-title p {
+  max-width: 650px;
+
+  margin: 11px 0 0;
+
+  color: #748078;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Status */
+
+.admin-delivery-status {
+  flex-shrink: 0;
+
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.admin-delivery-status.pending {
+  background: #f5f6e9;
+  color: #718044;
+
+  border: 1px solid #e2e6cb;
+}
+
+.admin-delivery-status.approved {
+  background: #edf7ef;
+  color: #377548;
+
+  border: 1px solid #d3e8d7;
+}
+
+.admin-delivery-status.rejected {
+  background: #fbf0ee;
+  color: #a05249;
+
+  border: 1px solid #eed9d5;
+}
+
+/* =========================================
+   APPLICATION ID
+   ========================================= */
+
+.admin-delivery-application-id {
+  margin-top: 25px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #e1e9e2;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.admin-delivery-application-id span {
+  color: #7b887f;
+
+  font-size: 11px;
+}
+
+.admin-delivery-application-id strong {
+  color: #49604f;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   ACTION MESSAGES
+   ========================================= */
+
+.admin-delivery-action-message {
+  margin-top: 18px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  border-radius: 10px;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.admin-delivery-action-message.error {
+  background: #fff3f1;
+
+  border: 1px solid #efd9d5;
+
+  color: #a45148;
+}
+
+.admin-delivery-action-message.success {
+  background: #eff8f0;
+
+  border: 1px solid #d5e9d8;
+
+  color: #3c7549;
+}
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.admin-delivery-section {
+  margin-top: 24px;
+
+  padding: 26px;
+
+  border: 1px solid #e0e8e1;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 8px 25px rgba(39, 76, 47, 0.045);
+}
+
+.admin-delivery-section-header {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 18px;
+
+  border-bottom: 1px solid #edf1ed;
+}
+
+.admin-delivery-section-icon {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eef6ef;
+
+  border: 1px solid #dcebdd;
+
+  color: #3d7d4c;
+}
+
+.admin-delivery-section-icon.vehicle {
+  background: #f1f6ee;
+  border-color: #dfe8d8;
+}
+
+.admin-delivery-section-icon.documents {
+  background: #f3f6f1;
+  border-color: #e0e6dd;
+}
+
+.admin-delivery-section-header span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #819087;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-delivery-section-header h2 {
+  margin: 0;
+
+  color: #2b4532;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================================
+   DETAILS GRID
+   ========================================= */
+
+.admin-delivery-details-grid {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.admin-delivery-review-item {
+  min-height: 76px;
+
+  padding: 14px 15px;
+
+  border: 1px solid #e5ebe6;
+  border-radius: 11px;
+
+  background: #fafcf9;
+}
+
+.admin-delivery-review-item.full {
+  grid-column: 1 / -1;
+}
+
+.admin-delivery-review-item > span {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 8px;
+
+  color: #7b887f;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+}
+
+.admin-delivery-review-item > span svg {
+  color: #719077;
+}
+
+.admin-delivery-review-item > strong {
+  display: block;
+
+  color: #344d3a;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  line-height: 1.5;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   DOCUMENTS
+   ========================================= */
+
+.admin-delivery-documents-grid {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.admin-delivery-document-card {
+  min-height: 72px;
+
+  padding: 13px 14px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  border: 1px solid #e3eae4;
+  border-radius: 11px;
+
+  background: #fafcf9;
+}
+
+.admin-delivery-document-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #eef5ef;
+
+  color: #4b8157;
+
+  border: 1px solid #dce9de;
+}
+
+.admin-delivery-document-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.admin-delivery-document-info span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #718078;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.admin-delivery-document-info strong {
+  display: block;
+
+  color: #3d5543;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-delivery-document-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #9aa49d;
+
+  font-size: 9px;
+}
+
+.admin-delivery-document-check {
+  flex-shrink: 0;
+
+  color: #5d9867;
+}
+
+.admin-delivery-no-documents {
+  margin-top: 20px;
+
+  min-height: 110px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px dashed #d9e3db;
+  border-radius: 11px;
+
+  background: #fafcf9;
+
+  color: #89968d;
+
+  text-align: center;
+}
+
+.admin-delivery-no-documents p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+.admin-delivery-document-note {
+  margin-top: 15px;
+
+  padding: 12px 14px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  border: 1px solid #e7ece7;
+  border-radius: 9px;
+
+  background: #f8faf8;
+
+  color: #7c8980;
+}
+
+.admin-delivery-document-note svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: #8b998e;
+}
+
+.admin-delivery-document-note p {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   REVIEW INFORMATION
+   ========================================= */
+
+.admin-delivery-review-info {
+  margin-top: 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.admin-delivery-review-info > div {
+  padding: 15px;
+
+  border: 1px solid #e2e9e3;
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.admin-delivery-review-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #89948c;
+
+  font-size: 10px;
+}
+
+.admin-delivery-review-info strong {
+  color: #3e5846;
+
+  font-size: 13px;
+
+  text-transform: capitalize;
+}
+
+/* =========================================
+   ACTION AREA
+   ========================================= */
+
+.admin-delivery-actions {
+  margin-top: 28px;
+}
+
+.admin-delivery-action-buttons {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+.admin-delivery-reject-btn,
+.admin-delivery-approve-btn {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border-radius: 11px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.admin-delivery-reject-btn {
+  border: 1px solid #e4c9c5;
+
+  background: #fffaf9;
+
+  color: #a1534a;
+}
+
+.admin-delivery-reject-btn:hover:not(:disabled) {
+  background: #fff4f2;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 16px rgba(139, 77, 68, 0.08);
+}
+
+.admin-delivery-approve-btn {
+  border: 1px solid #2f7041;
+
+  background: #2f7041;
+
+  color: #ffffff;
+}
+
+.admin-delivery-approve-btn:hover:not(:disabled) {
+  background: #285f37;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(47, 112, 65, 0.16);
+}
+
+.admin-delivery-reject-btn:disabled,
+.admin-delivery-approve-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   REJECTION PANEL
+   ========================================= */
+
+.admin-delivery-reject-panel {
+  padding: 22px;
+
+  border: 1px solid #ecd8d4;
+  border-radius: 14px;
+
+  background: #fffaf9;
+}
+
+.admin-delivery-reject-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 16px;
+}
+
+.admin-delivery-reject-header > div {
+  flex: 1;
+}
+
+.admin-delivery-reject-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #a45a50;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.admin-delivery-reject-header h3 {
+  margin: 0;
+
+  color: #5d403c;
+
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.admin-delivery-reject-header > svg {
+  flex-shrink: 0;
+
+  color: #a45a50;
+}
+
+.admin-delivery-reject-panel textarea {
+  width: 100%;
+
+  min-height: 125px;
+
+  resize: vertical;
+
+  padding: 13px 14px;
+
+  border: 1px solid #e4d5d2;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #4c403e;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-delivery-reject-panel textarea:focus {
+  border-color: #c88980;
+
+  box-shadow:
+    0 0 0 3px rgba(168, 86, 75, 0.07);
+}
+
+.admin-delivery-reject-panel textarea::placeholder {
+  color: #aaa19f;
+}
+
+/* Rejection footer */
+
+.admin-delivery-reject-footer {
+  margin-top: 11px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.admin-delivery-reject-footer small {
+  color: #a19693;
+
+  font-size: 10px;
+}
+
+.admin-delivery-reject-footer > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.admin-delivery-cancel-btn,
+.admin-delivery-confirm-reject-btn {
+  min-height: 40px;
+
+  padding: 0 15px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  border-radius: 8px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-delivery-cancel-btn {
+  border: 1px solid #dce3de;
+
+  background: #ffffff;
+
+  color: #68756c;
+}
+
+.admin-delivery-cancel-btn:hover:not(:disabled) {
+  background: #f8faf8;
+}
+
+.admin-delivery-confirm-reject-btn {
+  border: 1px solid #a2534a;
+
+  background: #a2534a;
+
+  color: #ffffff;
+}
+
+.admin-delivery-confirm-reject-btn:hover:not(:disabled) {
+  background: #91483f;
+}
+
+.admin-delivery-cancel-btn:disabled,
+.admin-delivery-confirm-reject-btn:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   PROCESSED APPLICATION
+   ========================================= */
+
+.admin-delivery-processed {
+  margin-top: 25px;
+
+  min-height: 50px;
+
+  padding: 13px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px solid #e1e8e2;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  color: #748078;
+
+  font-size: 12px;
+}
+
+.admin-delivery-processed svg {
+  color: #5e8e68;
+}
+
+.admin-delivery-processed strong {
+  color: #425a49;
+
+  text-transform: capitalize;
+}
+
+/* =========================================
+   LOADING
+   ========================================= */
+
+.admin-delivery-loading {
+  width: min(430px, calc(100% - 32px));
+
+  margin: 0 auto;
+
+  min-height: 260px;
+
+  padding: 40px 30px;
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: 1px solid #e0e8e1;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(39, 76, 47, 0.08);
+}
+
+.admin-delivery-loading-icon {
+  color: #3f8150;
+
+  animation: adminDeliverySpin 1.2s linear infinite;
+}
+
+.admin-delivery-loading h2 {
+  margin: 18px 0 6px;
+
+  color: #29422f;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.admin-delivery-loading p {
+  margin: 0;
+
+  color: #849087;
+
+  font-size: 12px;
+}
+
+@keyframes adminDeliverySpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   ERROR CARD
+   ========================================= */
+
+.admin-delivery-error-card {
+  width: min(500px, 100%);
+
+  margin: 80px auto 0;
+
+  padding: 40px 30px;
+
+  text-align: center;
+
+  border: 1px solid #e2e9e3;
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 18px 45px rgba(39, 76, 47, 0.07);
+}
+
+.admin-delivery-error-icon {
+  width: 60px;
+  height: 60px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #fff2f0;
+
+  color: #a6534a;
+
+  border: 1px solid #efd9d5;
+}
+
+.admin-delivery-error-card h2 {
+  margin: 0;
+
+  color: #354c3b;
+
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.admin-delivery-error-card p {
+  margin: 10px auto 0;
+
+  color: #7d8880;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.admin-delivery-error-card button {
+  margin-top: 24px;
+
+  min-height: 44px;
+
+  padding: 0 20px;
+
+  border: 1px solid #347544;
+  border-radius: 9px;
+
+  background: #347544;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .admin-delivery-review-header-inner {
+    padding: 0 20px;
+  }
+
+  .admin-delivery-review-container {
+    padding: 34px 20px 50px;
+  }
+
+  .admin-delivery-review-title h1 {
+    font-size: 30px;
+  }
+
+  .admin-delivery-section {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .admin-delivery-review-header-inner {
+    min-height: 64px;
+  }
+
+  .admin-delivery-header-brand span {
+    display: none;
+  }
+
+  .admin-delivery-back {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .admin-delivery-review-title {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .admin-delivery-status {
+    align-self: flex-start;
+  }
+
+  .admin-delivery-details-grid,
+  .admin-delivery-documents-grid,
+  .admin-delivery-review-info,
+  .admin-delivery-action-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-delivery-review-item.full {
+    grid-column: auto;
+  }
+
+  .admin-delivery-section {
+    padding: 20px 17px;
+  }
+
+  .admin-delivery-reject-footer {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-delivery-reject-footer > div {
+    width: 100%;
+  }
+
+  .admin-delivery-cancel-btn,
+  .admin-delivery-confirm-reject-btn {
+    flex: 1;
+  }
+}
+
+@media (max-width: 430px) {
+
+  .admin-delivery-review-header-inner {
+    padding: 0 14px;
+  }
+
+  .admin-delivery-review-container {
+    padding: 27px 14px 40px;
+  }
+
+  .admin-delivery-review-title h1 {
+    font-size: 25px;
+  }
+
+  .admin-delivery-review-title p {
+    font-size: 12px;
+  }
+
+  .admin-delivery-application-id {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .admin-delivery-section {
+    margin-top: 18px;
+
+    padding: 18px 14px;
+
+    border-radius: 14px;
+  }
+
+  .admin-delivery-section-header {
+    gap: 9px;
+  }
+
+  .admin-delivery-section-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .admin-delivery-section-header h2 {
+    font-size: 16px;
+  }
+
+  .admin-delivery-review-item {
+    min-height: 70px;
+
+    padding: 12px;
+  }
+
+  .admin-delivery-review-item > strong {
+    font-size: 12px;
+  }
+
+  .admin-delivery-document-card {
+    padding: 11px;
+  }
+
+  .admin-delivery-document-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .admin-delivery-document-info strong {
+    font-size: 11px;
+  }
+
+  .admin-delivery-reject-panel {
+    padding: 16px;
+  }
+
+  .admin-delivery-reject-header h3 {
+    font-size: 14px;
+  }
+}

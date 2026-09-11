@@ -1,0 +1,778 @@
+/* =========================================================
+   INDIVIDUAL FARMER LOGIN
+========================================================= */
+
+.individual-farmer-login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  background: #f7f8f3;
+  color: #183322;
+}
+
+
+/* =========================================================
+   LEFT BRAND PANEL
+========================================================= */
+
+.farmer-login-brand-panel {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 42px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(
+      145deg,
+      #123b26 0%,
+      #1c5232 55%,
+      #28633d 100%
+    );
+  color: #ffffff;
+}
+
+.farmer-login-brand-panel::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -180px;
+  bottom: -180px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.farmer-login-brand-panel::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -100px;
+  bottom: -100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.farmer-login-brand {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.farmer-login-logo {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+========================================================= */
+
+.farmer-login-brand-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 500px;
+  margin: auto 0;
+}
+
+.farmer-login-eyebrow {
+  margin-bottom: 18px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.4px;
+
+  color: #cce4d0;
+}
+
+.farmer-login-brand-content h1 {
+  margin-bottom: 25px;
+
+  font-size: clamp(38px, 4vw, 58px);
+  line-height: 1.08;
+  font-weight: 500;
+  letter-spacing: -1.8px;
+}
+
+.farmer-login-brand-content > p:last-child {
+  max-width: 430px;
+
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1.75;
+
+  color: #d7e6da;
+}
+
+
+/* =========================================================
+   BRAND FOOTER
+========================================================= */
+
+.farmer-login-brand-footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  font-size: 12px;
+  color: #cfe0d2;
+}
+
+.farmer-login-brand-footer div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+
+/* =========================================================
+   RIGHT FORM PANEL
+========================================================= */
+
+.farmer-login-form-panel {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 48px 70px;
+
+  background: #f7f8f3;
+}
+
+.farmer-login-form-container {
+  width: 100%;
+  max-width: 480px;
+}
+
+
+/* =========================================================
+   MOBILE BRAND
+========================================================= */
+
+.farmer-login-mobile-brand {
+  display: none;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.farmer-login-heading {
+  margin-bottom: 32px;
+}
+
+.farmer-login-heading > span {
+  display: block;
+  margin-bottom: 11px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #64806b;
+}
+
+.farmer-login-heading h2 {
+  margin-bottom: 10px;
+
+  font-size: 36px;
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -1px;
+
+  color: #183322;
+}
+
+.farmer-login-heading p {
+  font-family: Georgia, serif;
+
+  font-size: 14px;
+  line-height: 1.65;
+
+  color: #728078;
+}
+
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.farmer-login-alert {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 13px 15px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  border-radius: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.farmer-login-alert p {
+  margin: 0;
+}
+
+.farmer-login-alert.error {
+  border: 1px solid #ead1cd;
+  background: #fff7f5;
+  color: #a3463a;
+}
+
+.farmer-login-alert.error > span {
+  width: 18px;
+  height: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #a3463a;
+  color: #ffffff;
+
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.farmer-login-alert.success {
+  border: 1px solid #cfe3d3;
+  background: #f1f8f2;
+  color: #28613b;
+}
+
+.farmer-login-alert.success svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.farmer-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.farmer-login-field,
+.farmer-login-otp-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-login-field label,
+.farmer-login-otp-field label {
+  margin-bottom: 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #34493a;
+}
+
+.farmer-login-field small {
+  margin-top: 8px;
+
+  font-family: Georgia, serif;
+  font-size: 11px;
+  line-height: 1.5;
+
+  color: #89938c;
+}
+
+
+/* =========================================================
+   MOBILE INPUT
+========================================================= */
+
+.farmer-mobile-input {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  border: 1px solid #d4ddd5;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.farmer-mobile-input:focus-within {
+  border-color: #4d8058;
+
+  box-shadow:
+    0 0 0 3px rgba(65, 116, 76, 0.09);
+}
+
+.farmer-mobile-input > span {
+  height: 100%;
+  padding: 0 17px;
+
+  display: flex;
+  align-items: center;
+
+  border-right: 1px solid #e1e7e2;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #3f5646;
+}
+
+.farmer-mobile-input input {
+  flex: 1;
+
+  min-width: 0;
+  height: 100%;
+
+  padding: 0 16px;
+
+  border: 0;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  color: #183322;
+}
+
+.farmer-mobile-input input::placeholder {
+  color: #a3aaa5;
+}
+
+
+/* =========================================================
+   OTP
+========================================================= */
+
+.farmer-login-otp-field {
+  align-items: flex-start;
+}
+
+.farmer-otp-input {
+  width: 100%;
+  height: 64px;
+
+  padding: 0 18px;
+
+  border: 1px solid #d4ddd5;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+
+  letter-spacing: 9px;
+  text-align: center;
+
+  color: #183322;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.farmer-otp-input:focus {
+  border-color: #4d8058;
+
+  box-shadow:
+    0 0 0 3px rgba(65, 116, 76, 0.09);
+}
+
+.farmer-otp-input::placeholder {
+  color: #b4bbb6;
+  letter-spacing: 9px;
+}
+
+.farmer-login-otp-field > span {
+  margin-top: 8px;
+
+  font-family: Georgia, serif;
+  font-size: 11px;
+
+  color: #89938c;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.farmer-login-primary-button {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: #1f5a35;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.farmer-login-primary-button:hover:not(:disabled) {
+  background: #17482a;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(31, 90, 53, 0.16);
+}
+
+.farmer-login-primary-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.farmer-login-primary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SPINNER
+========================================================= */
+
+.farmer-login-spinner {
+  animation: farmer-login-spin 0.9s linear infinite;
+}
+
+@keyframes farmer-login-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   CHANGE NUMBER
+========================================================= */
+
+.farmer-change-number {
+  align-self: center;
+
+  border: 0;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #52725b;
+
+  cursor: pointer;
+}
+
+.farmer-change-number:hover {
+  color: #1f5a35;
+  text-decoration: underline;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.farmer-login-security {
+  margin-top: 30px;
+  padding: 15px 16px;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  border: 1px solid #e0e6e0;
+  border-radius: 10px;
+
+  background: #f2f5f0;
+
+  color: #53705a;
+}
+
+.farmer-login-security svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.farmer-login-security strong {
+  display: block;
+  margin-bottom: 3px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  color: #36523d;
+}
+
+.farmer-login-security p {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 11px;
+  line-height: 1.5;
+
+  color: #7b887f;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.farmer-login-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #e2e6e1;
+
+  font-size: 11px;
+  color: #8a948d;
+}
+
+.farmer-login-footer button {
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #52725b;
+
+  cursor: pointer;
+}
+
+.farmer-login-footer button:hover {
+  color: #1f5a35;
+}
+
+.farmer-login-footer span {
+  color: #a0a7a2;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .individual-farmer-login {
+    grid-template-columns: 1fr;
+  }
+
+  .farmer-login-brand-panel {
+    min-height: 300px;
+    padding: 30px 34px;
+  }
+
+  .farmer-login-brand-content {
+    margin: 45px 0 20px;
+  }
+
+  .farmer-login-brand-content h1 {
+    font-size: 40px;
+  }
+
+  .farmer-login-brand-footer {
+    display: none;
+  }
+
+  .farmer-login-form-panel {
+    min-height: auto;
+    padding: 55px 34px 60px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .individual-farmer-login {
+    display: block;
+    min-height: 100vh;
+  }
+
+  .farmer-login-brand-panel {
+    display: none;
+  }
+
+  .farmer-login-form-panel {
+    min-height: 100vh;
+    padding: 26px 20px 30px;
+
+    align-items: flex-start;
+  }
+
+  .farmer-login-form-container {
+    max-width: none;
+  }
+
+  .farmer-login-mobile-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 55px;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    color: #183322;
+  }
+
+  .farmer-login-mobile-brand > div {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #e7f0e8;
+    color: #28613b;
+  }
+
+  .farmer-login-heading {
+    margin-bottom: 27px;
+  }
+
+  .farmer-login-heading h2 {
+    font-size: 31px;
+  }
+
+  .farmer-login-alert {
+    margin-bottom: 18px;
+  }
+
+  .farmer-login-security {
+    margin-top: 25px;
+  }
+
+  .farmer-login-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+
+    margin-top: 28px;
+  }
+
+  .farmer-login-footer span {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .farmer-login-form-panel {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .farmer-login-mobile-brand {
+    margin-bottom: 42px;
+  }
+
+  .farmer-login-heading h2 {
+    font-size: 28px;
+  }
+
+  .farmer-mobile-input {
+    height: 53px;
+  }
+
+  .farmer-otp-input {
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .farmer-login-primary-button {
+    height: 52px;
+  }
+}

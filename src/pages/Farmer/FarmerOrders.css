@@ -1,0 +1,480 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap");
+
+.farmer-orders-page {
+  min-height: 100vh;
+  padding: 42px clamp(18px, 4vw, 60px) 70px;
+  box-sizing: border-box;
+  background: #f5f8f4;
+  color: #173d2b;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.fo-header {
+  max-width: 1450px;
+  margin: 0 auto 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.fo-eyebrow {
+  color: #64806f;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+
+.fo-header h1 {
+  margin: 7px 0 5px;
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1;
+}
+
+.fo-header p {
+  margin: 0;
+  color: #6c8074;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.fo-stat {
+  min-width: 135px;
+  padding: 16px 20px;
+  border: 1px solid #dce7de;
+  border-radius: 15px;
+  background: #fff;
+  text-align: center;
+}
+
+.fo-stat strong {
+  display: block;
+  font-size: 29px;
+  color: #18533a;
+}
+
+.fo-stat span {
+  color: #75877d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.fo-tabs {
+  max-width: 1450px;
+  margin: 0 auto 20px;
+  padding: 5px;
+  width: fit-content;
+  border: 1px solid #dce6de;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  gap: 4px;
+}
+
+.fo-tabs button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 18px;
+  background: transparent;
+  color: #657b6e;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.fo-tabs button.active {
+  background: #18533a;
+  color: #fff;
+}
+
+.fo-tabs b {
+  margin-left: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.fo-error {
+  max-width: 1450px;
+  margin: 0 auto 18px;
+  padding: 13px 16px;
+  border-radius: 10px;
+  background: #fff3f0;
+  color: #9b4d43;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.fo-loading,
+.farmer-orders-empty {
+  max-width: 1450px;
+  margin: 45px auto;
+  padding: 60px 25px;
+  border: 1px solid #dfe8e1;
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+}
+
+.fo-empty-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.farmer-orders-empty h2 {
+  margin: 0 0 6px;
+  font-size: 25px;
+}
+
+.farmer-orders-empty p {
+  margin: 0;
+  color: #77887e;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+.fo-order-grid {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.fo-order-card {
+  padding: 22px;
+  border: 1px solid #dfe8e1;
+  border-radius: 17px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(24, 61, 43, .045);
+}
+
+.fo-card-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.fo-order-number {
+  color: #809087;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.fo-card-head h2 {
+  margin: 6px 0 0;
+  font-size: 22px;
+}
+
+.fo-status {
+  padding: 7px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.fo-pending { background: #fff2d8; color: #9a6c1b; }
+.fo-accepted { background: #e8f2ff; color: #3c6593; }
+.fo-ready { background: #e6f5e9; color: #39734c; }
+.fo-picked_up { background: #eeeaff; color: #66548c; }
+.fo-delivered { background: #e4f4e8; color: #347047; }
+.fo-rejected { background: #fff0ed; color: #a15349; }
+
+.fo-items {
+  margin-top: 18px;
+  border-top: 1px solid #edf1ed;
+}
+
+.fo-item {
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-bottom: 1px solid #f0f3f0;
+}
+
+.fo-item-icon {
+  width: 47px;
+  height: 47px;
+  border-radius: 11px;
+  background: #f0f6f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fo-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.fo-item-info strong {
+  display: block;
+  font-size: 15px;
+}
+
+.fo-item-info span {
+  display: block;
+  margin-top: 3px;
+  color: #7a8c82;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+}
+
+.fo-item > b {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.fo-card-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.fo-card-meta div {
+  padding: 11px 12px;
+  border-radius: 9px;
+  background: #f7f9f7;
+}
+
+.fo-card-meta span {
+  display: block;
+  color: #85948b;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.fo-card-meta strong {
+  display: block;
+  margin-top: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+.fo-earnings {
+  color: #236344;
+}
+
+.fo-address {
+  margin-top: 13px;
+  padding: 12px;
+  border-left: 3px solid #bdd5c3;
+  background: #f8faf8;
+}
+
+.fo-address span {
+  color: #647b6d;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.fo-address p {
+  margin: 5px 0 0;
+  color: #536a5d;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.fo-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.fo-actions button {
+  min-height: 39px;
+  padding: 9px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+}
+
+.fo-actions button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.fo-secondary {
+  border: 1px solid #d8e2da;
+  background: #fff;
+  color: #486355;
+}
+
+.fo-primary {
+  border: 1px solid #18533a;
+  background: #18533a;
+  color: #fff;
+}
+
+.fo-reject {
+  border: 1px solid #ead6d2;
+  background: #fff8f6;
+  color: #9b5047;
+}
+
+.fo-waiting {
+  flex: 1;
+  min-height: 39px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  background: #f2f6f3;
+  color: #63796b;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+}
+
+.fo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+  background: rgba(16, 34, 25, .48);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fo-modal {
+  width: min(570px, 96vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(0,0,0,.25);
+}
+
+.fo-modal-head {
+  padding: 20px 22px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e9eeea;
+}
+
+.fo-modal-head span {
+  color: #788a80;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.fo-modal-head h2 {
+  margin: 5px 0 0;
+  font-size: 22px;
+}
+
+.fo-modal-head button {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #dce5de;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.fo-detail-section {
+  padding: 17px 22px;
+  border-bottom: 1px solid #edf1ed;
+}
+
+.fo-detail-section h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+}
+
+.fo-detail-section p {
+  margin: 4px 0;
+  color: #667b70;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.fo-detail-item {
+  padding: 9px 0;
+  display: grid;
+  grid-template-columns: 35px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #f0f3f0;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.fo-detail-item b {
+  color: #6e8176;
+  font-weight: 400;
+}
+
+.fo-modal-total {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f8f5;
+}
+
+.fo-modal-total span {
+  color: #708278;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+}
+
+.fo-modal-total strong {
+  color: #18533a;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width: 850px) {
+  .fo-order-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fo-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .farmer-orders-page {
+    padding: 25px 14px 50px;
+  }
+
+  .fo-card-head {
+    flex-direction: column;
+  }
+
+  .fo-card-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .fo-actions {
+    flex-direction: column;
+  }
+
+  .fo-actions button,
+  .fo-waiting {
+    width: 100%;
+  }
+}

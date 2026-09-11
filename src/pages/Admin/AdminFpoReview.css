@@ -1,0 +1,1062 @@
+.admin-fpo-page {
+  min-height: 100vh;
+  background: #f5f7f4;
+  color: #203a27;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-fpo-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8e1;
+}
+
+.admin-fpo-header-inner {
+  width: min(1180px, calc(100% - 40px));
+  min-height: 68px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-fpo-back-link,
+.admin-fpo-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  border: none;
+  background: transparent;
+
+  color: #617068;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+.admin-fpo-back-link:hover {
+  color: #2f7043;
+}
+
+.admin-fpo-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #31573b;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-fpo-header-brand div {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #edf5ee;
+  color: #397248;
+}
+
+.admin-fpo-logout {
+  padding: 8px 12px;
+
+  border: 1px solid #dfe6df;
+  border-radius: 9px;
+
+  background: #ffffff;
+}
+
+.admin-fpo-logout:hover {
+  background: #f4f7f4;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.admin-fpo-main {
+  width: min(1100px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  padding: 38px 0 55px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.admin-fpo-title-section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 24px;
+}
+
+.admin-fpo-eyebrow {
+  display: block;
+
+  color: #718a77;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+}
+
+.admin-fpo-title-section h1 {
+  margin: 7px 0 8px;
+
+  color: #1f3d28;
+
+  font-size: 31px;
+  font-weight: 600;
+}
+
+.admin-fpo-title-section p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #738078;
+
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.admin-fpo-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 8px 12px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.admin-fpo-status.pending {
+  background: #f8f1df;
+  color: #997426;
+}
+
+.admin-fpo-status.approved {
+  background: #e9f5ec;
+  color: #327047;
+}
+
+.admin-fpo-status.rejected {
+  background: #faece9;
+  color: #a84d40;
+}
+
+.admin-fpo-status.pending svg {
+  animation: admin-fpo-spin 1.2s linear infinite;
+}
+
+@keyframes admin-fpo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   OVERVIEW
+========================================= */
+
+.admin-fpo-overview-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.admin-fpo-overview-card {
+  min-height: 82px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 16px;
+
+  border: 1px solid #e2e8e1;
+  border-radius: 13px;
+
+  background: #ffffff;
+}
+
+.admin-fpo-overview-card > svg {
+  width: 36px;
+  height: 36px;
+
+  padding: 9px;
+
+  border-radius: 9px;
+
+  background: #edf5ee;
+  color: #397348;
+}
+
+.admin-fpo-overview-card span {
+  display: block;
+
+  color: #8a948d;
+
+  font-size: 10px;
+}
+
+.admin-fpo-overview-card strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #315139;
+
+  font-size: 15px;
+}
+
+/* =========================================
+   PANELS
+========================================= */
+
+.admin-fpo-panel {
+  margin-bottom: 18px;
+
+  padding: 24px;
+
+  border: 1px solid #e1e8e0;
+  border-radius: 16px;
+
+  background: #ffffff;
+}
+
+.admin-fpo-panel-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 22px;
+}
+
+.admin-fpo-panel-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #edf5ee;
+  color: #397348;
+}
+
+.admin-fpo-panel-heading span {
+  color: #7c8a80;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.admin-fpo-panel-heading h2 {
+  margin: 4px 0 0;
+
+  color: #2c4d34;
+
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.admin-fpo-details-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 0 22px;
+}
+
+.admin-fpo-detail-item {
+  min-height: 64px;
+
+  padding: 11px 0;
+
+  border-bottom: 1px solid #edf0ec;
+}
+
+.admin-fpo-detail-item.full {
+  grid-column: 1 / -1;
+}
+
+.admin-fpo-detail-item span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #89938c;
+
+  font-size: 10px;
+}
+
+.admin-fpo-detail-item strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #354d3b;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   FARMER TABLE
+========================================= */
+
+.admin-fpo-table-wrap {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.admin-fpo-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 720px;
+}
+
+.admin-fpo-table th {
+  padding: 11px 12px;
+
+  background: #f6f8f5;
+
+  color: #78847c;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+.admin-fpo-table td {
+  padding: 13px 12px;
+
+  border-bottom: 1px solid #edf0ec;
+
+  color: #6e7971;
+
+  font-size: 10px;
+}
+
+.admin-farmer-name {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.admin-farmer-name strong {
+  color: #354d3b;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-farmer-avatar {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf5ee;
+  color: #397348;
+}
+
+/* =========================================
+   DOCUMENTS
+========================================= */
+
+.admin-fpo-documents {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+.admin-fpo-document-card {
+  min-height: 67px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px;
+
+  border: 1px solid #e5eae4;
+  border-radius: 11px;
+
+  background: #fafcf9;
+}
+
+.admin-fpo-document-icon {
+  width: 35px;
+  height: 35px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #eef4ef;
+  color: #397348;
+}
+
+.admin-fpo-document-card div:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+
+.admin-fpo-document-card strong {
+  display: block;
+
+  color: #3a513f;
+
+  font-size: 11px;
+}
+
+.admin-fpo-document-card span {
+  display: block;
+
+  margin-top: 3px;
+
+  overflow: hidden;
+
+  color: #919a94;
+
+  font-size: 9px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-document-check {
+  color: #3b794c;
+}
+
+.admin-fpo-document-note {
+  margin-top: 13px;
+
+  padding: 11px 13px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  border: 1px solid #e5ebe4;
+  border-radius: 9px;
+
+  background: #f7f9f6;
+
+  color: #748078;
+
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.admin-fpo-document-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.admin-fpo-empty {
+  min-height: 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #a0a9a2;
+}
+
+.admin-fpo-empty p {
+  margin: 9px 0 0;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   SUBMISSION INFO
+========================================= */
+
+.admin-fpo-submission-info {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+}
+
+.admin-fpo-submission-info > div {
+  padding: 14px;
+
+  border: 1px solid #e1e8e0;
+  border-radius: 11px;
+
+  background: #ffffff;
+}
+
+.admin-fpo-submission-info span {
+  display: block;
+
+  color: #8b958e;
+
+  font-size: 9px;
+}
+
+.admin-fpo-submission-info strong {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #405745;
+
+  font-size: 11px;
+
+  word-break: break-word;
+}
+
+/* =========================================
+   ACTION PANEL
+========================================= */
+
+.admin-fpo-action-panel {
+  padding: 24px;
+
+  border: 1px solid #dfe8e0;
+  border-radius: 16px;
+
+  background: #f9fbf8;
+}
+
+.admin-fpo-action-heading {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  color: #397048;
+}
+
+.admin-fpo-action-heading h2 {
+  margin: 0;
+
+  color: #2c4d34;
+
+  font-size: 17px;
+}
+
+.admin-fpo-action-heading p {
+  max-width: 700px;
+
+  margin: 5px 0 0;
+
+  color: #78847b;
+
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.admin-fpo-action-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 22px;
+}
+
+.admin-fpo-approve-btn,
+.admin-fpo-reject-btn,
+.admin-fpo-confirm-reject,
+.admin-fpo-cancel-btn {
+  min-height: 42px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px 16px;
+
+  border-radius: 10px;
+
+  font-family: inherit;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-fpo-approve-btn {
+  border: none;
+
+  background: #2f7543;
+  color: #ffffff;
+}
+
+.admin-fpo-approve-btn:hover {
+  background: #245f35;
+}
+
+.admin-fpo-reject-btn {
+  border: 1px solid #e3d2ce;
+
+  background: #ffffff;
+  color: #a14c40;
+}
+
+.admin-fpo-reject-btn:hover {
+  background: #fff7f5;
+}
+
+.admin-fpo-approve-btn:disabled,
+.admin-fpo-reject-btn:disabled,
+.admin-fpo-confirm-reject:disabled,
+.admin-fpo-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   REJECT BOX
+========================================= */
+
+.admin-fpo-reject-box {
+  margin-top: 20px;
+
+  padding: 17px;
+
+  border: 1px solid #ecd9d5;
+  border-radius: 12px;
+
+  background: #fffaf8;
+}
+
+.admin-fpo-reject-box label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #704b45;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.admin-fpo-reject-box textarea {
+  width: 100%;
+
+  resize: vertical;
+
+  padding: 12px;
+
+  border: 1px solid #e5d7d3;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+  color: #3e5043;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.admin-fpo-reject-box textarea:focus {
+  border-color: #c9958c;
+
+  box-shadow:
+    0 0 0 3px rgba(180, 90, 75, 0.08);
+}
+
+.admin-fpo-reject-footer {
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.admin-fpo-reject-footer > span {
+  color: #9a918e;
+
+  font-size: 9px;
+}
+
+.admin-fpo-reject-footer > div {
+  display: flex;
+  gap: 8px;
+}
+
+.admin-fpo-cancel-btn {
+  border: 1px solid #dedfdd;
+
+  background: #ffffff;
+  color: #69746d;
+}
+
+.admin-fpo-confirm-reject {
+  border: none;
+
+  background: #b14f42;
+  color: #ffffff;
+}
+
+.admin-fpo-confirm-reject:hover {
+  background: #963e33;
+}
+
+/* =========================================
+   FINAL STATUS
+========================================= */
+
+.admin-fpo-final-status {
+  padding: 20px 22px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  border: 1px solid #dfe7df;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  color: #397048;
+}
+
+.admin-fpo-final-status strong {
+  display: block;
+
+  color: #304d38;
+
+  font-size: 13px;
+}
+
+.admin-fpo-final-status span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #7c877f;
+
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   LOADING / ERROR
+========================================= */
+
+.admin-fpo-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: #f5f7f4;
+}
+
+.admin-fpo-loading-card {
+  width: min(430px, 100%);
+
+  padding: 38px 30px;
+
+  border: 1px solid #e1e8e0;
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+.admin-fpo-loading-card h2 {
+  margin: 17px 0 7px;
+
+  color: #2d4e35;
+
+  font-size: 20px;
+}
+
+.admin-fpo-loading-card p {
+  margin: 0;
+
+  color: #828d85;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.admin-fpo-loader {
+  color: #397048;
+
+  animation: admin-fpo-spin 1s linear infinite;
+}
+
+.admin-fpo-error-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #faece9;
+  color: #a84d40;
+}
+
+.admin-fpo-back-btn {
+  margin-top: 20px;
+
+  padding: 11px 18px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #2f7543;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================================
+   SIMPLE SPROUT ICON
+========================================= */
+
+.admin-sprout-icon {
+  width: 36px;
+  height: 36px;
+
+  position: relative;
+
+  display: block;
+
+  border-radius: 9px;
+
+  background: #edf5ee;
+}
+
+.admin-sprout-icon span {
+  position: absolute;
+
+  width: 9px;
+  height: 14px;
+
+  border: 2px solid #397348;
+
+  border-radius: 100% 0 100% 0;
+
+  transform: rotate(-35deg);
+}
+
+.admin-sprout-icon span:first-child {
+  left: 8px;
+  top: 9px;
+}
+
+.admin-sprout-icon span:last-child {
+  right: 8px;
+  top: 13px;
+
+  transform: rotate(35deg);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .admin-fpo-overview-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-fpo-details-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-fpo-header-inner,
+  .admin-fpo-main {
+    width: calc(100% - 28px);
+  }
+
+  .admin-fpo-header-brand {
+    display: none;
+  }
+
+  .admin-fpo-main {
+    padding-top: 28px;
+  }
+
+  .admin-fpo-title-section {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-fpo-title-section h1 {
+    font-size: 27px;
+  }
+
+  .admin-fpo-overview-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 9px;
+  }
+
+  .admin-fpo-overview-card {
+    padding: 13px;
+
+    min-height: 75px;
+  }
+
+  .admin-fpo-panel {
+    padding: 18px;
+  }
+
+  .admin-fpo-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-fpo-detail-item.full {
+    grid-column: auto;
+  }
+
+  .admin-fpo-documents {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-fpo-submission-info {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-fpo-action-buttons {
+    flex-direction: column;
+  }
+
+  .admin-fpo-approve-btn,
+  .admin-fpo-reject-btn {
+    width: 100%;
+  }
+
+  .admin-fpo-reject-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-fpo-reject-footer > div {
+    width: 100%;
+  }
+
+  .admin-fpo-cancel-btn,
+  .admin-fpo-confirm-reject {
+    flex: 1;
+  }
+}
+
+@media (max-width: 390px) {
+  .admin-fpo-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-fpo-header-inner {
+    min-height: 62px;
+  }
+
+  .admin-fpo-back-link {
+    font-size: 11px;
+  }
+}

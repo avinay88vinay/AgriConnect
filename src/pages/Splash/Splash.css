@@ -1,0 +1,646 @@
+/* =========================================
+   AGRICONNECT SPLASH SCREEN
+========================================= */
+
+.splash-screen {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fcf7 0%,
+      #f1f8ee 50%,
+      #e6f1e1 100%
+    );
+
+  color: #18351f;
+}
+
+
+/* =========================================
+   BACKGROUND
+========================================= */
+
+.splash-glow {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(40px);
+}
+
+.splash-glow-one {
+  top: -230px;
+  right: -150px;
+
+  background: rgba(86, 145, 79, 0.10);
+}
+
+.splash-glow-two {
+  bottom: -250px;
+  left: -170px;
+
+  background: rgba(104, 155, 82, 0.08);
+}
+
+
+/* =========================================
+   FARM FIELD LINES
+========================================= */
+
+.farm-lines {
+  position: absolute;
+
+  left: -10%;
+  bottom: -90px;
+
+  width: 120%;
+  height: 320px;
+
+  pointer-events: none;
+}
+
+.farm-lines span {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+  height: 130px;
+
+  border-top: 1px solid rgba(48, 105, 57, 0.08);
+
+  border-radius: 50%;
+}
+
+.farm-lines span:nth-child(1) {
+  bottom: 0;
+
+  transform: rotate(-2deg);
+}
+
+.farm-lines span:nth-child(2) {
+  bottom: 55px;
+
+  transform: rotate(-3deg);
+}
+
+.farm-lines span:nth-child(3) {
+  bottom: 110px;
+
+  transform: rotate(-4deg);
+}
+
+.farm-lines span:nth-child(4) {
+  bottom: 165px;
+
+  transform: rotate(-5deg);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.splash-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+  max-width: 650px;
+
+  padding: 40px 24px;
+
+  text-align: center;
+
+  animation: contentAppear 1s ease forwards;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo-wrapper {
+  position: relative;
+
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.logo-box {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #347c42;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 12px 35px rgba(39, 91, 47, 0.10);
+
+  animation: logoAppear 0.9s ease 0.15s both;
+}
+
+
+.logo-status {
+  position: absolute;
+
+  right: 5px;
+  bottom: 9px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #6da052;
+
+  box-shadow:
+    0 0 0 5px rgba(109, 160, 82, 0.10);
+
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   BRAND NAME
+========================================= */
+
+.brand-name {
+  margin: 0;
+
+  font-size: clamp(44px, 7vw, 64px);
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -2.5px;
+
+  color: #18351f;
+
+  animation: titleAppear 0.9s ease 0.35s both;
+}
+
+
+.brand-name span {
+  font-weight: 400;
+
+  color: #43884e;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.brand-line {
+  width: 0;
+  height: 2px;
+
+  margin: 20px auto;
+
+  border-radius: 10px;
+
+  background: #6fa259;
+
+  animation: lineAppear 0.8s ease 0.75s forwards;
+}
+
+
+/* =========================================
+   TAGLINE
+========================================= */
+
+.tagline {
+  margin: 0;
+
+  font-size: 20px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+
+  color: #34573b;
+
+  animation: fadeUp 0.8s ease 0.85s both;
+}
+
+
+.description {
+  margin: 9px auto 0;
+
+  max-width: 420px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #7a897d;
+
+  animation: fadeUp 0.8s ease 1s both;
+}
+
+
+/* =========================================
+   CONNECTION
+========================================= */
+
+.connection {
+  width: 260px;
+
+  margin: 35px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: fadeUp 0.8s ease 1.15s both;
+}
+
+
+.connection-point {
+  width: 8px;
+  height: 8px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #6b9b55;
+
+  box-shadow:
+    0 0 0 5px rgba(107, 155, 85, 0.08);
+}
+
+
+.connection-line {
+  position: relative;
+
+  width: 72px;
+  height: 1px;
+
+  margin: 0 9px;
+
+  overflow: hidden;
+
+  background: rgba(74, 125, 81, 0.15);
+}
+
+
+.connection-moving-dot {
+  position: absolute;
+
+  left: -25px;
+  top: 0;
+
+  width: 25px;
+  height: 1px;
+
+  background: #4e8d58;
+
+  animation: connectionMove 1.6s linear infinite;
+}
+
+
+.connection-moving-dot.reverse {
+  animation-delay: 0.8s;
+}
+
+
+.connection-logo {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: #43884e;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(67, 136, 78, 0.14);
+
+  box-shadow:
+    0 7px 20px rgba(45, 95, 51, 0.08);
+
+  animation: centerPulse 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading-container {
+  margin-top: 34px;
+
+  animation: fadeUp 0.8s ease 1.3s both;
+}
+
+
+.loading-container p {
+  margin: 0 0 10px;
+
+  font-size: 10px;
+
+  letter-spacing: 0.3px;
+
+  color: #8a968c;
+}
+
+
+.loading-track {
+  width: 165px;
+  height: 2px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: rgba(61, 111, 68, 0.10);
+}
+
+
+.loading-progress {
+  width: 0%;
+  height: 100%;
+
+  border-radius: 10px;
+
+  background: #4e8d58;
+
+  animation: loadingProgress 5.7s linear forwards;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.splash-footer {
+  position: absolute;
+
+  z-index: 10;
+
+  left: 0;
+  right: 0;
+  bottom: 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  font-size: 10px;
+
+  letter-spacing: 1.1px;
+
+  text-transform: uppercase;
+
+  color: #8a978c;
+
+  animation: fadeUp 1s ease 1.5s both;
+}
+
+
+.separator {
+  color: #b1bcb3;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes contentAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes logoAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes titleAppear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+
+    letter-spacing: 5px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+
+    letter-spacing: -2.5px;
+  }
+}
+
+
+@keyframes lineAppear {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+
+  to {
+    width: 45px;
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes connectionMove {
+  from {
+    left: -25px;
+  }
+
+  to {
+    left: calc(100% + 25px);
+  }
+}
+
+
+@keyframes centerPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
+
+@keyframes statusPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+
+
+@keyframes loadingProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .splash-content {
+    padding: 30px 20px;
+  }
+
+
+  .logo-wrapper {
+    margin-bottom: 20px;
+  }
+
+
+  .brand-name {
+    font-size: 44px;
+  }
+
+
+  .tagline {
+    font-size: 18px;
+  }
+
+
+  .description {
+    font-size: 12px;
+
+    max-width: 300px;
+  }
+
+
+  .connection {
+    width: 225px;
+  }
+
+
+  .connection-line {
+    width: 53px;
+  }
+
+
+  .splash-footer {
+    bottom: 18px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .brand-name {
+    font-size: 39px;
+  }
+
+
+  .tagline {
+    font-size: 16px;
+  }
+
+
+  .description {
+    font-size: 11px;
+  }
+
+
+  .connection {
+    transform: scale(0.9);
+  }
+}

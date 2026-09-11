@@ -1,0 +1,610 @@
+/* =========================================
+   Delivery Waiting For Approval
+   ========================================= */
+
+.delivery-waiting-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(47, 125, 72, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(47, 125, 72, 0.06),
+      transparent 30%
+    ),
+    #f7faf6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px;
+}
+
+/* Background glow */
+
+.delivery-waiting-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+.delivery-waiting-glow.one {
+  width: 360px;
+  height: 360px;
+  top: -180px;
+  left: -140px;
+  background: rgba(52, 132, 76, 0.07);
+}
+
+.delivery-waiting-glow.two {
+  width: 420px;
+  height: 420px;
+  right: -200px;
+  bottom: -220px;
+  background: rgba(52, 132, 76, 0.06);
+}
+
+/* Main container */
+
+.delivery-waiting-container {
+  width: 100%;
+  max-width: 720px;
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logout */
+
+.delivery-waiting-logout {
+  align-self: flex-end;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border: 1px solid #d7e1d8;
+  background: rgba(255, 255, 255, 0.82);
+
+  color: #536258;
+
+  padding: 9px 15px;
+  border-radius: 9px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.delivery-waiting-logout:hover {
+  background: #ffffff;
+  border-color: #b9cbbd;
+  color: #244c30;
+  transform: translateY(-1px);
+}
+
+/* Main card */
+
+.delivery-waiting-card {
+  width: 100%;
+  margin-top: 14px;
+
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #e0e8e1;
+  border-radius: 22px;
+
+  padding: 42px 48px;
+
+  box-shadow:
+    0 18px 50px rgba(35, 67, 42, 0.08),
+    0 3px 12px rgba(35, 67, 42, 0.04);
+
+  text-align: center;
+}
+
+/* Loading state */
+
+.delivery-waiting-card.loading {
+  padding: 55px 48px;
+}
+
+.delivery-waiting-logo {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #eef6ef;
+  color: #2f7d48;
+
+  border: 1px solid #dcebdd;
+}
+
+.delivery-waiting-card h1 {
+  margin: 0;
+
+  color: #1d3022;
+
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 600;
+
+  letter-spacing: -0.5px;
+}
+
+.delivery-waiting-description {
+  max-width: 560px;
+
+  margin: 14px auto 0;
+
+  color: #68746b;
+
+  font-size: 15px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+/* Loading spinner */
+
+.delivery-waiting-spinner {
+  width: 46px;
+  height: 46px;
+
+  margin: 28px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f1f7f2;
+  color: #3d8654;
+
+  animation: deliverySpin 1.4s linear infinite;
+}
+
+@keyframes deliverySpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Label */
+
+.delivery-waiting-label {
+  margin: 20px 0 10px;
+
+  color: #64816a;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Status icon */
+
+.delivery-status-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.delivery-status-icon.pending {
+  background: #f3f7ed;
+  color: #70854b;
+  border: 1px solid #e0e8d3;
+}
+
+.delivery-status-icon.rejected {
+  background: #faf1ef;
+  color: #a35448;
+  border: 1px solid #efdcd8;
+}
+
+.delivery-status-icon.error {
+  background: #faf1ef;
+  color: #a35448;
+  border: 1px solid #efdcd8;
+
+  margin-bottom: 20px;
+}
+
+/* Progress status */
+
+.delivery-waiting-status {
+  width: 100%;
+
+  margin: 34px auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  min-width: 110px;
+
+  color: #a0aaa3;
+
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.status-item > div {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f4f6f4;
+  border: 1px solid #e1e6e2;
+
+  color: #8b968e;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-item.active {
+  color: #42664b;
+}
+
+.status-item.active > div {
+  background: #eef6ef;
+  border-color: #d3e5d5;
+  color: #3c7d4d;
+}
+
+.status-line {
+  width: 70px;
+  height: 1px;
+
+  margin: 0 4px 25px;
+
+  background: #dce4dd;
+}
+
+/* Information note */
+
+.delivery-waiting-note {
+  width: 100%;
+
+  margin-top: 32px;
+
+  padding: 20px 22px;
+
+  text-align: left;
+
+  background: #f7faf7;
+  border: 1px solid #e3ebe4;
+  border-radius: 13px;
+}
+
+.delivery-waiting-note strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #304b36;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.delivery-waiting-note p {
+  margin: 0;
+
+  color: #69766d;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Application ID */
+
+.delivery-application-id {
+  margin-top: 22px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #e8ede9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #7a847d;
+
+  font-size: 12px;
+}
+
+.delivery-application-id span {
+  font-weight: 400;
+}
+
+.delivery-application-id strong {
+  color: #405a47;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+}
+
+/* Rejection box */
+
+.delivery-rejection-box {
+  width: 100%;
+
+  margin-top: 26px;
+
+  padding: 17px 19px;
+
+  text-align: left;
+
+  background: #fcf6f4;
+  border: 1px solid #ecdcd8;
+  border-radius: 12px;
+}
+
+.delivery-rejection-box span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #9a5a50;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.delivery-rejection-box p {
+  margin: 0;
+
+  color: #654b47;
+
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Main button */
+
+.delivery-waiting-button {
+  width: 100%;
+  max-width: 320px;
+
+  margin: 30px auto 0;
+
+  min-height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+
+  border: 1px solid #2f7041;
+  border-radius: 10px;
+
+  background: #2f7041;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 7px 18px rgba(47, 112, 65, 0.14);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.delivery-waiting-button:hover {
+  background: #285f37;
+  border-color: #285f37;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 9px 22px rgba(47, 112, 65, 0.18);
+}
+
+.delivery-waiting-button:active {
+  transform: translateY(0);
+}
+
+/* Footer */
+
+.delivery-waiting-footer {
+  margin-top: 22px;
+
+  color: #8a948d;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media (max-width: 700px) {
+  .delivery-waiting-page {
+    padding: 25px 16px;
+  }
+
+  .delivery-waiting-card {
+    padding: 34px 24px;
+    border-radius: 18px;
+  }
+
+  .delivery-waiting-card.loading {
+    padding: 42px 24px;
+  }
+
+  .delivery-waiting-card h1 {
+    font-size: 26px;
+  }
+
+  .delivery-waiting-description {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .delivery-waiting-status {
+    align-items: flex-start;
+  }
+
+  .status-item {
+    min-width: 82px;
+    font-size: 11px;
+  }
+
+  .status-line {
+    width: 35px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .delivery-waiting-note {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery-waiting-page {
+    padding: 18px 12px;
+  }
+
+  .delivery-waiting-container {
+    max-width: 100%;
+  }
+
+  .delivery-waiting-logout {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .delivery-waiting-card {
+    margin-top: 10px;
+    padding: 30px 18px;
+    border-radius: 16px;
+  }
+
+  .delivery-waiting-card.loading {
+    padding: 36px 18px;
+  }
+
+  .delivery-status-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .delivery-waiting-label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .delivery-waiting-card h1 {
+    font-size: 23px;
+  }
+
+  .delivery-waiting-description {
+    font-size: 13px;
+  }
+
+  .delivery-waiting-status {
+    margin-top: 28px;
+  }
+
+  .status-item {
+    min-width: 70px;
+    gap: 7px;
+    font-size: 10px;
+  }
+
+  .status-item > div {
+    width: 32px;
+    height: 32px;
+  }
+
+  .status-line {
+    width: 20px;
+    margin-bottom: 24px;
+  }
+
+  .delivery-waiting-note p {
+    font-size: 12px;
+  }
+
+  .delivery-application-id {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .delivery-waiting-footer {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+}

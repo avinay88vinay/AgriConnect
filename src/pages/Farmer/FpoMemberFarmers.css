@@ -1,0 +1,981 @@
+.fpo-farmers-page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f9fcf7 0%,
+      #f1f8ee 55%,
+      #e7f1e3 100%
+    );
+
+  color: #18351f;
+}
+
+.fpo-farmers-glow {
+  position: fixed;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.fpo-farmers-glow-one {
+  top: -250px;
+  right: -170px;
+
+  background: rgba(81, 145, 78, 0.1);
+}
+
+.fpo-farmers-glow-two {
+  bottom: -280px;
+  left: -190px;
+
+  background: rgba(105, 160, 83, 0.08);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.fpo-farmers-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 900px;
+
+  padding: 45px 25px 50px;
+}
+
+
+/* =========================================
+   BACK
+========================================= */
+
+.fpo-farmers-back {
+  position: absolute;
+
+  top: 35px;
+  left: 25px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  color: #68776c;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.fpo-farmers-back:hover {
+  color: #347c42;
+  background: #ffffff;
+  transform: translateX(-2px);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.fpo-farmers-header {
+  margin: 15px auto 28px;
+
+  text-align: center;
+}
+
+.fpo-farmers-logo {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(52, 124, 66, 0.13);
+  border-radius: 17px;
+
+  background: #ffffff;
+
+  color: #43884e;
+
+  box-shadow:
+    0 12px 30px rgba(39, 91, 47, 0.09);
+}
+
+.fpo-farmers-label {
+  margin-bottom: 7px;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+
+  color: #43884e;
+}
+
+.fpo-farmers-header h1 {
+  font-size: 38px;
+
+  letter-spacing: -1.3px;
+}
+
+.fpo-farmers-header h1 span {
+  color: #43884e;
+  font-weight: 400;
+}
+
+.fpo-farmers-subtitle {
+  max-width: 500px;
+
+  margin: 8px auto 0;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  color: #78867b;
+}
+
+
+/* =========================================
+   PROGRESS
+========================================= */
+
+.fpo-farmers-progress {
+  max-width: 650px;
+
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.farmer-progress-step {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #a0aaa2;
+}
+
+.farmer-progress-step span {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid #d7e2d8;
+
+  background: #ffffff;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.farmer-progress-step p {
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+.farmer-progress-step.active {
+  color: #43884e;
+}
+
+.farmer-progress-step.active span,
+.farmer-progress-step.completed span {
+  border-color: #43884e;
+
+  background: #43884e;
+
+  color: #ffffff;
+}
+
+.farmer-progress-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 0 10px;
+
+  background: #d8e3d9;
+}
+
+.farmer-progress-line.active {
+  background: #43884e;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.fpo-farmers-card {
+  padding: 30px;
+
+  border: 1px solid rgba(52, 124, 66, 0.12);
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 15px 40px rgba(39, 91, 47, 0.08);
+}
+
+
+/* =========================================
+   SUMMARY
+========================================= */
+
+.farmers-summary {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding-bottom: 22px;
+
+  border-bottom: 1px solid #edf1ed;
+}
+
+.farmers-summary-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eef7ec;
+
+  color: #43884e;
+}
+
+.farmers-summary div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.farmers-summary span {
+  font-size: 10px;
+  color: #8a968d;
+}
+
+.farmers-summary strong {
+  font-size: 14px;
+  color: #29462f;
+}
+
+
+/* =========================================
+   FARMERS LIST
+========================================= */
+
+.farmers-list {
+  margin-top: 25px;
+}
+
+.farmers-list-header {
+  margin-bottom: 13px;
+}
+
+.farmers-list-header h2 {
+  font-size: 15px;
+  color: #29462f;
+}
+
+.farmers-list-header p {
+  margin-top: 3px;
+
+  font-size: 10px;
+  color: #929d94;
+}
+
+
+/* =========================================
+   FARMER ITEM
+========================================= */
+
+.farmer-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  border: 1px solid #e3ebe4;
+  border-radius: 12px;
+
+  background: #fbfdfb;
+
+  transition: 0.2s ease;
+}
+
+.farmer-item:hover {
+  border-color: #cbdccb;
+  background: #ffffff;
+}
+
+.farmer-avatar {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #eaf5e8;
+
+  color: #43884e;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.farmer-item-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.farmer-item-info h3 {
+  font-size: 13px;
+  color: #29462f;
+}
+
+.farmer-item-info > p {
+  margin-top: 3px;
+
+  font-size: 9px;
+  color: #929d94;
+}
+
+.farmer-item-meta {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px 15px;
+
+  margin-top: 9px;
+}
+
+.farmer-item-meta span {
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  font-size: 9px;
+  color: #758278;
+}
+
+.farmer-item-meta svg {
+  color: #43884e;
+}
+
+.farmer-item-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.farmer-item-actions button {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e0e8e1;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #77857a;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.farmer-item-actions button:hover {
+  color: #43884e;
+  border-color: #bfd3c1;
+}
+
+.farmer-item-actions button:last-child:hover {
+  color: #b0524b;
+  border-color: #e7c8c5;
+}
+
+
+/* =========================================
+   ADD FARMER
+========================================= */
+
+.add-farmer-section {
+  margin-top: 27px;
+
+  padding-top: 27px;
+
+  border-top: 1px solid #edf1ed;
+}
+
+.add-farmer-title {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.add-farmer-icon {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef7ec;
+
+  color: #43884e;
+}
+
+.add-farmer-title h2 {
+  font-size: 15px;
+  color: #29462f;
+}
+
+.add-farmer-title p {
+  margin-top: 3px;
+
+  font-size: 10px;
+  color: #929d94;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.farmer-form {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 17px;
+}
+
+.farmer-field {
+  min-width: 0;
+}
+
+.farmer-field.full {
+  grid-column: 1 / -1;
+}
+
+.farmer-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #526558;
+}
+
+.farmer-field label span {
+  color: #43884e;
+}
+
+.farmer-field input {
+  width: 100%;
+  height: 47px;
+
+  padding: 0 13px;
+
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #fbfdfb;
+
+  color: #29462f;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  transition: 0.2s ease;
+}
+
+.farmer-field input:focus {
+  border-color: #6aa873;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 136, 78, 0.07);
+}
+
+.farmer-field input::placeholder {
+  color: #a0aaa2;
+}
+
+
+/* =========================================
+   ICON INPUT
+========================================= */
+
+.field-with-icon {
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: 12px;
+
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+
+  background: #fbfdfb;
+
+  transition: 0.2s ease;
+}
+
+.field-with-icon:focus-within {
+  border-color: #6aa873;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 136, 78, 0.07);
+}
+
+.field-with-icon svg {
+  flex-shrink: 0;
+
+  color: #829187;
+}
+
+.field-with-icon input {
+  height: 100%;
+
+  padding-left: 9px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  box-shadow: none;
+}
+
+.field-with-icon small {
+  margin-right: 11px;
+
+  font-size: 9px;
+  color: #8b988e;
+}
+
+
+/* =========================================
+   MOBILE INPUT
+========================================= */
+
+.farmer-mobile-input {
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #dbe7dc;
+  border-radius: 10px;
+
+  background: #fbfdfb;
+
+  transition: 0.2s ease;
+}
+
+.farmer-mobile-input:focus-within {
+  border-color: #6aa873;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(67, 136, 78, 0.07);
+}
+
+.farmer-mobile-input > span {
+  padding-left: 12px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #526558;
+}
+
+.farmer-mobile-input > div {
+  width: 1px;
+  height: 21px;
+
+  margin: 0 9px;
+
+  background: #dbe4dc;
+}
+
+.farmer-mobile-input svg {
+  flex-shrink: 0;
+
+  color: #829187;
+}
+
+.farmer-mobile-input input {
+  height: 100%;
+
+  padding: 0 10px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.farmer-error {
+  grid-column: 1 / -1;
+
+  padding: 10px 13px;
+
+  border: 1px solid #f0d7d4;
+  border-radius: 9px;
+
+  background: #fff3f2;
+
+  color: #b0524b;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   FORM ACTIONS
+========================================= */
+
+.farmer-form-actions {
+  grid-column: 1 / -1;
+
+  display: flex;
+
+  gap: 10px;
+}
+
+.save-farmer-button {
+  flex: 1;
+
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #43884e;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.save-farmer-button:hover {
+  background: #347c42;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 7px 18px rgba(52, 124, 66, 0.17);
+}
+
+.cancel-farmer-button {
+  height: 49px;
+
+  padding: 0 22px;
+
+  border: 1px solid #dbe5dc;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  color: #68776c;
+
+  font-family: inherit;
+  font-size: 12px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   ADD ANOTHER
+========================================= */
+
+.add-another-button {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border: 1px dashed #a9c7ac;
+  border-radius: 10px;
+
+  background: #f6faf5;
+
+  color: #43884e;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-another-button:hover {
+  border-color: #43884e;
+  background: #eef7ec;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.farmers-bottom {
+  margin-top: 27px;
+
+  padding-top: 22px;
+
+  border-top: 1px solid #edf1ed;
+}
+
+.farmers-bottom p {
+  margin-bottom: 13px;
+
+  font-size: 10px;
+  line-height: 1.5;
+
+  color: #929d94;
+
+  text-align: center;
+}
+
+.continue-farmers-button {
+  width: 100%;
+  height: 51px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #43884e;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.continue-farmers-button:hover {
+  background: #347c42;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(52, 124, 66, 0.18);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.fpo-farmers-footer {
+  margin-top: 25px;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  color: #929d94;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .fpo-farmers-container {
+    padding: 35px 18px 40px;
+  }
+
+  .fpo-farmers-back {
+    top: 22px;
+    left: 18px;
+  }
+
+  .fpo-farmers-header h1 {
+    font-size: 31px;
+  }
+
+  .fpo-farmers-card {
+    padding: 22px 19px;
+  }
+
+  .farmer-form {
+    grid-template-columns: 1fr;
+  }
+
+  .farmer-field.full {
+    grid-column: auto;
+  }
+
+  .farmer-form-actions {
+    grid-column: auto;
+  }
+
+  .farmer-error {
+    grid-column: auto;
+  }
+
+  .farmer-item {
+    flex-wrap: wrap;
+  }
+
+  .farmer-item-info {
+    flex-basis: calc(100% - 55px);
+  }
+
+  .farmer-item-actions {
+    width: 100%;
+    margin-left: 53px;
+  }
+
+  .farmer-progress-line {
+    width: 25px;
+    margin: 0 5px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .fpo-farmers-header h1 {
+    font-size: 28px;
+  }
+
+  .fpo-farmers-card {
+    padding: 20px 16px;
+  }
+
+  .farmer-progress-step p {
+    display: none;
+  }
+
+  .farmer-progress-line {
+    width: 35px;
+  }
+
+  .farmer-item-meta {
+    gap: 7px 11px;
+  }
+
+  .farmer-item-actions {
+    margin-left: 0;
+  }
+}
