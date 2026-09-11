@@ -71,8 +71,7 @@ import WaitingForApproval from "./pages/Common/WaitingForApproval";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+<BrowserRouter basename={import.meta.env.BASE_URL}>      <Routes>
 
         {/* =====================================
             MAIN AGRICONNECT FLOW
